@@ -32,7 +32,7 @@ $(function(){
 		yourName = $("#yourName"),
 		//yourEmail = $("#yourEmail"),
 		hisName = $("#hisName"),
-		hisEmail = $("#hisEmail"),
+		//hisEmail = $("#hisEmail"),
 		chatForm = $("#chatform"),
 		textarea = $("#message"),
 		messageTimeSent = $(".timesent"),
@@ -109,11 +109,11 @@ $(function(){
 					alert("There already is a \"" + name + "\" in this room!");
 					return;
 				}
-				email = hisEmail.val();
+				//email = hisEmail.val();
 
-				if(!isValid(email)){
+				/*if(!isValid(email)){
 					alert("Wrong e-mail format!");
-				}
+				}*/
 				else {
 					socket.emit('login', {user: name, avatar: email, id: id});
 				}
